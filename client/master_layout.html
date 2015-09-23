@@ -1,0 +1,11 @@
+<template name="masterLayout">
+{{#unless currentUser}}
+{{> atForm state='signUp'}}
+ {{else}}
+  {{> yield region='nav'}}
+  <div id="content">
+    {{> yield}}
+  </div>
+  {{> yield region='footer'}}
+    {{/unless}}
+</template>
