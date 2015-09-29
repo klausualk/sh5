@@ -9,7 +9,9 @@ if (Meteor.isClient) {
  Template.private.events({
 
     'click button': function () {
-      if (Meteor.isCordova){
+        console.log("jõudsin siia");
+      //if (Meteor.isCordova){
+        if (Meteor.isClient){
         navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:1, duration: 13});
       } else {
         // do the standard mdg:camera thing here ??
